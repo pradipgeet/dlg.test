@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite failures="2" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="49.196064">
+    <testcase classname="Greenflag user Login" name="Greenflag user successful login" time="17.808232">
+        <system-out>
+            <![CDATA[Given The application user navigates to GreenFlag Login page................passed
+When User enters "qa@greenflag.com" & "Password1"...........................passed
+And User clicks on Submit button............................................passed
+Then User should be successfully logged in..................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="Greenflag user Login" name="Greenflag user login validations - Defect" time="16.807921">
+        <failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertFalse(Assert.java:64)&#13;&#10;&#9;at org.junit.Assert.assertFalse(Assert.java:74)&#13;&#10;&#9;at stepDefinitions.userLogin_steps.user_should_not_be_logged_in(userLogin_steps.java:71)&#13;&#10;&#9;at ✽.Then User should not be logged in(features/userLogin.feature:22)&#13;&#10;">
+            <![CDATA[Given The application user navigates to GreenFlag Login page................passed
+When User enters "qa@greenflag.uk" & "Password1"............................passed
+And User clicks on Submit button............................................passed
+Then User should not be logged in...........................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at stepDefinitions.userLogin_steps.user_should_not_be_logged_in(userLogin_steps.java:71)
+	at ✽.Then User should not be logged in(features/userLogin.feature:22)
+]]>
+        </failure>
+    </testcase>
+    <testcase classname="Greenflag user Login" name="Greenflag user login validations - Defect 2" time="14.579911">
+        <failure message="java.lang.AssertionError&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:86)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertFalse(Assert.java:64)&#13;&#10;&#9;at org.junit.Assert.assertFalse(Assert.java:74)&#13;&#10;&#9;at stepDefinitions.userLogin_steps.user_should_not_be_logged_in(userLogin_steps.java:71)&#13;&#10;&#9;at ✽.Then User should not be logged in(features/userLogin.feature:22)&#13;&#10;">
+            <![CDATA[Given The application user navigates to GreenFlag Login page................passed
+When User enters "qa@greenflag.com" & "Password2"...........................passed
+And User clicks on Submit button............................................passed
+Then User should not be logged in...........................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:86)
+	at org.junit.Assert.assertTrue(Assert.java:41)
+	at org.junit.Assert.assertFalse(Assert.java:64)
+	at org.junit.Assert.assertFalse(Assert.java:74)
+	at stepDefinitions.userLogin_steps.user_should_not_be_logged_in(userLogin_steps.java:71)
+	at ✽.Then User should not be logged in(features/userLogin.feature:22)
+]]>
+        </failure>
+    </testcase>
+</testsuite>
